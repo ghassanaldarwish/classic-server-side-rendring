@@ -7,7 +7,7 @@ router.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.use("/", router);
+app.use("*", router);
 app.listen(process.env.port || 3000);
 
 console.log("Running at Port 3000");
