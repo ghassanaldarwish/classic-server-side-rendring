@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("build"));
 router.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "index.html"));
 });
 app.use("*", router);
 app.listen(process.env.port || 3000);
