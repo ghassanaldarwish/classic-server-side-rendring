@@ -6,9 +6,9 @@ const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, "build")));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "build/static")));
+  app.use(express.static(path.join(__dirname, "build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "build", "index2.html"));
+    res.sendFile(path.join(__dirname + "build/index2.html"));
   });
 }
 
