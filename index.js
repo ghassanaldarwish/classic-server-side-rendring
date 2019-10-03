@@ -8,12 +8,12 @@ app.use(express.static(path.join(__dirname, "build")));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")));
   app.get("*", (req, res) => {
-    res.send("HMMMMMMMMMMMMMMMMMMM");
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
 }
 
 app.get("*", (req, res) => {
-  res.send("HMMMMMMMMMMMMMMMMMMM");
+  res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
 app.listen(port, (req, res) => {
