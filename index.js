@@ -4,7 +4,7 @@ const path = require("path");
 const port = process.env.PORT || 5000;
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "test", "test.json"));
+  res.sendFile(path.join(__dirname, "build", "test.json"));
 });
 
 app.listen(port, (req, res) => {
