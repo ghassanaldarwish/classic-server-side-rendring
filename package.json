@@ -3,14 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "10.6.0",
-    "npm": "6.1.0",
-    "yarn": "1.7.0"
-  },
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "dev": "concurrently \"npm run server\""
   },
   "keywords": [],
   "author": "",
